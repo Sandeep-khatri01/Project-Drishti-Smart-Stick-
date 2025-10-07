@@ -1,50 +1,105 @@
-DRISHTI: Intelligent Safety Stick for the Visually Impaired
+<div align="center">
+DRISHTI (दृष्टि): Intelligent Safety Stick for the Visually Impaired
 
-Project DRISHTI (दृष्टिः Vision) is an open-source, smart electronic travel aid designed to enhance the mobility and safety of visually impaired individuals. It acts as an intelligent guardian by integrating multiple sensors to provide real-time environmental awareness and an automated emergency alert system.
+An open-source, smart electronic travel aid to enhance the mobility and safety of visually impaired individuals.
 
-This project addresses the key limitations of traditional aids, which cannot detect head-level obstacles or ground-level hazards like puddles. It also tackles the critical challenge of summoning help quickly after a fall and the economic inaccessibility of commercial smart canes, which can cost from ₹15,000 to over ₹50,000. By leveraging an ESP32 microcontroller and common components, DRISHTI offers a powerful, low-cost, and reliable safety device.
+</div>
 
-✨ Key Features->
+Project DRISHTI acts as an intelligent guardian by integrating multiple sensors to provide real-time environmental awareness and an automated emergency alert system.
+The Problem
 
--Proactive Obstacle Detection: An ultrasonic sensor detects forward obstacles within a 1 m range. When an obstacle is detected, it provides a 2-second haptic (vibration) warning to the user.
+Traditional aids for the visually impaired have key limitations: they cannot detect head-level obstacles or ground-level hazards like puddles. Furthermore, summoning help quickly after a fall is a critical challenge. Commercial smart canes that solve these issues are often economically inaccessible, costing anywhere from ₹15,000 to over ₹50,000.
+Our Solution
 
--Automated Fall Detection: An integrated MPU-6050 accelerometer accurately detects the unique G-force signature associated with a user fall.
+By leveraging an ESP32 microcontroller and common off-the-shelf components, DRISHTI offers a powerful, low-cost, and reliable open-source safety device that anyone can build.
+✨ Key Features
 
--Multi-Stage SOS System: Upon detecting a fall, a dual-alert system is immediately activated:
+    👁 Proactive Obstacle Detection: An ultrasonic sensor detects forward obstacles within a 1-meter range, providing a 2-second haptic (vibration) warning.
 
--Local Alarm: A loud, continuous buzzer sounds to alert people in the immediate vicinity for help.
+    🤸 Automated Fall Detection: An integrated MPU-6050 accelerometer accurately detects the unique G-force signature associated with a user fall.
 
--Remote Alert: Simultaneously, a signal is sent via Bluetooth LE to a companion smartphone app. The app then automatically sends a pre-written emergency SMS to a designated contact.
+    🆘 Multi-Stage SOS System: Upon detecting a fall, a dual-alert system is immediately activated:
 
--Intuitive Feedback: The system uses both haptic feedback (vibration) for obstacles and audible alerts (buzzer) for emergencies, providing clear and distinct warnings.
+        Local Alarm: A loud, continuous buzzer sounds to alert people nearby.
 
--Rechargeable Power System: Powered by a standard 3.7V 18650 Li-ion battery, featuring a TP4056 module for safe and easy charging via a standard USB port.
+        Remote Alert: Simultaneously, a Bluetooth LE signal is sent to a companion app, which automatically sends a pre-written emergency SMS to a designated contact.
 
-🛠️ Hardware & Software
--->Hardware Components
-Microcontroller: ESP32
+    💬 Intuitive Feedback: The system uses distinct haptic feedback (vibration) for obstacles and audible alerts (buzzer) for emergencies.
 
--Sensors:
-Ultrasonic Sensor (for obstacle detection)
-MPU-6050 Accelerometer & Gyroscope (for fall detection)
+    🔋 Rechargeable Power: Powered by a standard 3.7V 18650 Li-ion battery with a TP4056 module for safe and easy USB charging.
 
--Actuators:
-Vibration Motor (for haptic feedback)
-Buzzer (for audible alerts)
+🛠 Hardware & Software
+Hardware Components
 
-Connectivity: Bluetooth Low Energy (BLE)
+Component
+	
 
-Software-->
-Firmware: Developed in C++ (Arduino Framework) for the ESP32.
+Purpose
 
-Companion App: A mobile application that receives Bluetooth signals to trigger emergency SMS alerts.
+Microcontroller
+	
 
-🔭 Future Scope->
--GPS Navigation: Integrating a GPS module to provide haptic turn-by-turn directions to pre-saved locations.
 
--Advanced Ground Sensing: Upgrading to Time-of-Flight (ToF) laser sensors for more accurate detection of potholes and puddles, even in bright sunlight.
+ESP32
+	
 
--AI on the Edge: Using an ESP32-CAM to run a lightweight machine learning model to recognize and announce specific objects like 'stairs' or 'motorcycle'.
+Main processing unit
 
-📜 Conclusion:-
-Project DRISHTI successfully demonstrates an affordable, reliable, and feature-rich safety device for the visually impaired. Its offline-first design and use of low-cost components make it a practical and scalable solution to real-world challenges. It is more than a prototype; it is a platform for empowerment that offers a tangible increase in safety, confidence, and independence for its users.
+Sensors
+	
+
+
+Ultrasonic Sensor
+	
+
+Obstacle detection
+
+MPU-6050 Accelerometer & Gyroscope
+	
+
+Fall detection
+
+Actuators
+	
+
+
+Vibration Motor
+	
+
+Haptic feedback
+
+Buzzer
+	
+
+Audible alerts
+
+Connectivity & Power
+	
+
+
+Bluetooth Low Energy (BLE)
+	
+
+App communication
+
+3.7V 18650 Li-ion Battery & TP4056
+	
+
+Power & Charging
+Software Stack
+
+    Firmware: Developed in C++ (Arduino Framework) for the ESP32.
+
+    Companion App: A mobile application that receives Bluetooth signals to trigger emergency SMS alerts.
+
+🚀 Future Scope
+
+    GPS Navigation: Integrating a GPS module to provide haptic turn-by-turn directions.
+
+    Advanced Ground Sensing: Upgrading to Time-of-Flight (ToF) laser sensors for more accurate detection of potholes and puddles.
+
+    AI on the Edge: Using an ESP32-CAM to run a lightweight machine learning model to recognize and announce specific objects like 'stairs' or 'motorcycle'.
+
+📜 Conclusion
+
+Project DRISHTI is more than a prototype; it is a platform for empowerment. It successfully demonstrates an affordable, reliable, and feature-rich safety device that offers a tangible increase in safety, confidence, and independence for its users. Its offline-first design and use of low-cost components make it a practical and scalable solution to real-world challenges.
